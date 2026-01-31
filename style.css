@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ffe6f0;
+  text-align: center;
+}
+
+.menu button {
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #f06292;
+  color: white;
+  cursor: pointer;
+}
+
+.seccion {
+  display: none;
+  margin-top: 20px;
+}
+
+.seccion img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.activa {
+  display: block;
+}
+
+.wp {
+  background: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+}

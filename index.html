@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>La Media Tarde Pastelería</title>
+
+<style>
+body {
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+  background: #fff5f8;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  background: #f7b6d2;
+  padding: 20px;
+  color: #6b2c4f;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+}
+
+nav button {
+  background: #f28ab2;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+nav button:hover {
+  background: #e46a9a;
+}
+
+section {
+  display: none;
+  padding: 20px;
+}
+
+section.active {
+  display: block;
+}
+
+.card {
+  background: white;
+  max-width: 350px;
+  margin: auto;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>La Media Tarde Pastelería</h1>
+  <p>El dulce momento de tu media tarde 💖</p>
+</header>
+
+<nav>
+  <button onclick="mostrar('cupcakes')">Cupcakes</button>
+  <button onclick="mostrar('tortas')">Tortas</button>
+  <button onclick="mostrar('brownies')">Brownies</button>
+  <button onclick="mostrar('galletas')">Galletas</button>
+  <button onclick="mostrar('rollos')">Rollos de Canela</button>
+  <button onclick="mostrar('pedidos')">Pedidos</button>
+</nav>
+
+<section id="cupcakes" class="active">
+  <div class="card">
+    <img src="img/cupcakes.jpg" alt="Cupcakes">
+    <h2>Cupcakes Artesanales</h2>
+    <p>Vainilla, chocolate, red velvet y sabores por temporada.</p>
+  </div>
+</section>
+
+<section id="tortas">
+  <div class="card">
+    <img src="img/torta.jpg" alt="Tortas">
+    <h2>Tortas Caseras</h2>
+    <p>Vainilla, chocolate, marmoleadas y personalizadas.</p>
+  </div>
+</section>
+
+<section id="brownies">
+  <div class="card">
+    <img src="img/brownies.jpg" alt="Brownies">
+    <h2>Brownies</h2>
+    <p>Húmedos, intensos y chocolatosos.</p>
+  </div>
+</section>
+
+<section id="galletas">
+  <div class="card">
+    <img src="img/galletas.jpg" alt="Galletas">
+    <h2>Galletas Artesanales</h2>
+    <p>Chispas de chocolate, avena y mantequilla.</p>
+  </div>
+</section>
+
+<section id="rollos">
+  <div class="card">
+    <img src="img/rollos.jpg" alt="Rollos de Canela">
+    <h2>Rollos de Canela</h2>
+    <p>Con glaseado cremoso y toppings especiales.</p>
+  </div>
+</section>
+
+<section id="pedidos">
+  <div class="card">
+    <h2>Haz tu pedido 💕</h2>
+    <p>Escríbenos por WhatsApp y endulza tu día.</p>
+    <a class="whatsapp" href="https://wa.me/573000000000" target="_blank">
+      Pedir por WhatsApp
+    </a>
+  </div>
+</section>
+
+<script>
+function mostrar(id) {
+  document.querySelectorAll("section").forEach(sec => {
+    sec.classList.remove("active");
+  });
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
